@@ -1,15 +1,21 @@
 import csv
 import random
 
+##################
+# Run this first #
+##################
+
 a = 0
 numPeople = 0
 specialHardShip = 0
 waterRate = 0
-csv_file_path = '/home/bj2772798/TIDAL/unsorted_data.csv'
+csv_file_path = '/home/bj2772798/TIDAL-Hackathon/unsorted_data.csv' # Need to change file path to designated directory
 with open(csv_file_path, mode='w', newline='') as file:
     # Create a csv.writer object
     writer = csv.writer(file)
-    # Write data to the CSV file
+    # Generates database using metrics from Philadelphia, using income distribution, 
+    # number of people in household, and special hardship and writes it in csv
+    # Because ~700,000 rows are being added, program will take some time to finish running
     for x in range(0, 31000):
         a = random.randint(20000, 21112)
         numPeople = random.randint(1, 8)
